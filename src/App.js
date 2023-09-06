@@ -31,11 +31,27 @@ console.log('Hello World');
 
 //Variable holding value
 let userMessage = "Hello World!";
-//Console statemnet to print variable value
+//Console statement to print variable value - TO THE CONSOLE of the localhost
 console.log(userMessage);
 
 //Constants - constants cannpt be reassigned, use a variable to reassign
 const userMessage2 = "Hello World2";
 
 console.log(userMessage2);
+
+//operator example
+console.log(10/5);
+
+//This is considered a useless concat, and will not compile as expected
+// console.log("hello" + " world" + " concatenated");
+
+//Checks for equality, yields a boolean
+console.log(10 === 5);
+
+//This is considered a 'comparison to self' and will  not compile as 
+//expected - you could use a variable to compare to the integer value 
+//instead
+// if (10 === 10){
+//   console.log("works");
+// }
 
