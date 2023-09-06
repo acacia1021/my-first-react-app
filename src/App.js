@@ -115,4 +115,12 @@ const greeting = greetwithReturnValues("Markus");
 console.log(greeting);
 
 
+//Exercise #1
+function combine(a = 1, b = 2, c = 3){
+ 
+  return a * b / c;
+}
+
+const newValue = combine()
+console.log(newValue);
 
