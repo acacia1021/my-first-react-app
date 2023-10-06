@@ -275,8 +275,29 @@ console.log("edited hobbies: " + editedHobbies);
 // You can also convert items to JavaScript Objects
 // Curly braces need to be wrapped in parentheses in order to indicate that we want to return a JS obj instead of defining the function body of the arrow function
 const JSHobbies = hobbies.map((item) => ({
-  text: item
+  text: item,
 }));
 
 console.log("edited hobbies on next output: " + JSHobbies);
 console.log(JSHobbies);
+
+// Exercise #2:
+
+// Answer:
+
+function transformToObjects(numberArray) {
+
+  return numberArray.map((num) => ({
+    val: num
+  }));
+}
+
+// Test:
+function transformToObjects2(numberArray = [1,2,3]) {
+
+  return numberArray.map((num) => ({
+    val: num
+  }));
+}
+
+console.log(transformToObjects2());
