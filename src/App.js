@@ -27,7 +27,7 @@
 //The below is notes compiled from watching JavaScript Videos - it does not reflect the REACT project listed above
 
 //Hello World will show in the console
-console.log('Hello World');
+console.log("Hello World");
 
 //Variable holding value
 let userMessage = "Hello World!";
@@ -40,7 +40,7 @@ const userMessage2 = "Hello World2";
 console.log(userMessage2);
 
 //operator example
-console.log(10/5);
+console.log(10 / 5);
 
 //This is considered a useless concat, and will not compile as expected
 // console.log("hello" + " world" + " concatenated");
@@ -48,29 +48,29 @@ console.log(10/5);
 //Checks for equality, yields a boolean
 console.log(10 === 5);
 
-//This is considered a 'comparison to self' and will  not compile as 
-//expected - you could use a variable to compare to the integer value 
+//This is considered a 'comparison to self' and will  not compile as
+//expected - you could use a variable to compare to the integer value
 //instead
 // if (10 === 10){
 //   console.log("works");
 // }
 
 // function
-// or () => which is called an 'arrow function syntax' can be used as 
+// or () => which is called an 'arrow function syntax' can be used as
 // functions
 
-//Defining code that is not executed immediately, but instead later 
-//when the function is called - like a Java method - and as many times 
+//Defining code that is not executed immediately, but instead later
+//when the function is called - like a Java method - and as many times
 //as you want
-function greet(){
-  console.log('Hello from function call');
+function greet() {
+  console.log("Hello from function call");
 }
 
 //Calling execution of greet function
 greet();
 
 //Function with paramaters (i.e. input values)
-function greetwithparameters(username, message){
+function greetwithparameters(username, message) {
   console.log(username);
   console.log(message);
 }
@@ -79,13 +79,13 @@ function greetwithparameters(username, message){
 greetwithparameters("Max", "Hi there! ");
 
 //Function with paramaters (i.e. input values), that have default values
-function greetwithDefaultparameters(username, message = "Hello"){
+function greetwithDefaultparameters(username, message = "Hello") {
   console.log(username);
   console.log(message);
 }
 
-//Calling execution of greetwithDefaultparameters function, you can 
-//also override the default value by inserting the message value like 
+//Calling execution of greetwithDefaultparameters function, you can
+//also override the default value by inserting the message value like
 //the above example - as if the default value does not exist
 greetwithDefaultparameters("Freddi");
 
@@ -93,57 +93,61 @@ greetwithDefaultparameters("Freddi");
 //and a return statement
 //Functions must only have one return statement at most. Functions w/out
 //"return" implicitly return "undefined"
-function greetwithReturnValues(username, message = "I wanted to say Hello!"){
+function greetwithReturnValues(username, message = "I wanted to say Hello!") {
   //console.log(username);
   //console.log(message);
-  //Since we are not printing to the console, like the above 2 lines, 
-  //we should store the return value, in the line below, in either a 
-  //constant or a variable - shown on line 112 OR we can call the 
+  //Since we are not printing to the console, like the above 2 lines,
+  //we should store the return value, in the line below, in either a
+  //constant or a variable - shown on line 112 OR we can call the
   //function itself on the console as shown on line 108
   return "Hi, I am " + username + ". " + message;
 }
 
-//Calling execution of greetwithReturnValues function, within a 
+//Calling execution of greetwithReturnValues function, within a
 //console log call
 console.log(greetwithReturnValues("Mark"));
 
-//const value containing the value of function greetwithReturnValues 
+//const value containing the value of function greetwithReturnValues
 //after execution
 const greeting = greetwithReturnValues("Markus");
 
 //const value is printed to the screen
 console.log(greeting);
 
-
 //Exercise #1
-function combine(a = 1, b = 2, c = 3){
- 
-  return a * b / c;
+function combine(a = 1, b = 2, c = 3) {
+  return (a * b) / c;
 }
 
-const newValue = combine()
+const newValue = combine();
 console.log(newValue);
 
 //Arrow functions, syntax popular with anonymous functions - functions that do not need a name
-() => 
+
+// () =>
 //example above can be seen elsewhere
 
 //This is an example of an anonymous function
-export default function(){
-  console.log('Hello');
-}
+
+// export default function(){
+//   console.log('Hello');
+// }
 
 //This is an example of an anonymous function in arrow form, making it shorter
 //You would have your parameter names in the parentheses
-export default () => {
-  console.log('Hello');
-}
+
+// export default () => {
+//   console.log('Hello');
+// }
 
 //Arrow function w/ parameters example - you can also use a return here
+
 export default (username, message) => {
-  console.log('Hello');
+  console.log(
+    "Hello from default function - then username + message next output"
+  );
   return username + message;
-}
+};
 
 //Other arrow notes:
 // 1a. If your arrow functions takes exactly one parameter, you may omit the wrapping parentheses.
@@ -153,7 +157,7 @@ export default (username, message) => {
 
 //Instead of
 
-//number => { 
+//number => {
 //   return number * 3;
 // }
 // you could write
@@ -163,7 +167,6 @@ export default (username, message) => {
 
 // number => return number * 3; // invalid because return keyword must also be omitted!
 // number => if (number === 2) { return 5 }; // invalid because if statements can't be returned
-
 
 // 3.  Special case: Just returning an object
 
@@ -177,3 +180,65 @@ export default (username, message) => {
 // number => ({ age: number }); // wrapping the object in extra parentheses
 // By wrapping the object and its curly braces with an extra pair of parentheses, JavaScript understands that the curly braces are not there to define a function body but instead to create an object. Hence that object then gets returned.
 
+const userName = "Max";
+const userAge = 34;
+
+// the above can be defined as a user object using:
+
+const user = {
+  name: "Max",
+  age: 34,
+};
+
+console.log("This is the user" + user);
+console.log(user);
+
+//To gain access to the value of the object
+console.log("This is the user's name: " + user.name);
+
+// Objects can also be used to store functions - which we then typically refer to as methods
+
+const user2 = {
+  name: "Max",
+  age: 34,
+  greet(userName) {
+    console.log("Hello from the method inside the user2 object!");
+  },
+};
+
+user2.greet();
+
+// You can also access the properties of the object (i.e. methods & fields in this object),
+// by using the 'this' keyword!
+//'This' refers to the object - user3
+
+const user3 = {
+  name: "Max",
+  age: 34,
+  greet(userName) {
+    console.log("Hello from the method inside the user3 object!");
+    console.log("This is the age of the user3 object: " + this.age);
+  },
+};
+
+user3.greet();
+
+// You can either create objects like the above examples - to group values together,
+// or you can create blueprints via usage of 'class'
+
+class User {
+  // accepts parameters that are input values & store them in properties of the object that will be created based on the 'User' class, using the keyword: 'this'
+  // stores the parameter values 'name & age', in the properties utilizing the 'this' keyword
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  greet() {
+    console.log("Hi from User class greet method!");
+  }
+}
+
+
+const user4 = new User ("mauel", 35);
+console.log(user4);
+user4.greet();
