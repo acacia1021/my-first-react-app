@@ -124,3 +124,24 @@ function combine(a = 1, b = 2, c = 3){
 const newValue = combine()
 console.log(newValue);
 
+//Arrow functions, syntax popular with anonymous functions - functions that do not need a name
+() => 
+//example above can be seen elsewhere
+
+//This is an example of an anonymous function
+export default function(){
+  console.log('Hello');
+}
+
+//This is an example of an anonymous function in arrow form, making it shorter
+//You would have your parameter names in the parentheses
+export default () => {
+  console.log('Hello');
+}
+
+//Arrow function w/ parameters example - you can also use a return here
+export default (username, message) => {
+  console.log('Hello');
+  return username + message;
+}
+
