@@ -238,7 +238,45 @@ class User {
   }
 }
 
-
-const user4 = new User ("mauel", 35);
+const user4 = new User("mauel", 35);
 console.log(user4);
 user4.greet();
+
+// Arrays are a special type of object
+const hobbies = ["Sports", "cooking", "Reading"];
+
+console.log(hobbies[0]);
+
+// Allows you to add a new item to the end of the array
+hobbies.push("Working");
+console.log(hobbies);
+
+// Allows you to find the index of a certain value - takes a function as an input
+hobbies.findIndex((item) => {
+  return item === "Sports";
+});
+
+// We can store the index value in a constant & console log the constant saved value
+// const index = hobbies.findIndex((item) => {
+//   return item === "Sports";
+// });
+
+//This is the sorthand for the above example:
+const index = hobbies.findIndex((item) => item === "Sports");
+
+console.log(index);
+
+// Map method allows you to transform every item in an array to another item
+
+const editedHobbies = hobbies.map((item) => item + "!");
+
+console.log("edited hobbies: " + editedHobbies);
+
+// You can also convert items to JavaScript Objects
+// Curly braces need to be wrapped in parentheses in order to indicate that we want to return a JS obj instead of defining the function body of the arrow function
+const JSHobbies = hobbies.map((item) => ({
+  text: item
+}));
+
+console.log("edited hobbies on next output: " + JSHobbies);
+console.log(JSHobbies);
