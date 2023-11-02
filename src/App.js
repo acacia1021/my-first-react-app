@@ -301,3 +301,48 @@ function transformToObjects2(numberArray = [1,2,3]) {
 }
 
 console.log(transformToObjects2());
+
+
+
+//Destructuring Arrays & Objects
+
+//Array storage
+const userNameData = ["Max", "Schwarzmuller"];
+
+//Creating these constants for use can be shortened to a single step
+//Line 318
+const firstName = userNameData[0];
+const lastName = userNameData[1];
+
+//firstName mapped to "max", lastName mapped to "Schwarzmuller"
+const [firstName2, lastName2] = ["Fred", "Freddy"];
+
+console.log(firstName2);
+console.log(lastName2);
+
+//User Object for destructuring
+const user5 = {
+  name: "Mark",
+  age: 34
+};
+
+//Again, can be shortened
+const name = user.name;
+const age = user.age;
+
+//Need to label by property names, i.e., const names need to match 
+//property names in curly braces
+const {name2, age2} = {
+  name2: "Tom",
+  age2: 30
+};
+
+//Can also be written in this format:
+const {name3: userName3, age3} = {
+  name3: "Bison",
+  age3: 36
+};
+
+console.log(userName3);
+console.log(age3);
+
